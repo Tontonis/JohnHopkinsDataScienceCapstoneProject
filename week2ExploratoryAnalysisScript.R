@@ -97,9 +97,10 @@ grid.newpage()
 grid.draw(g)
 
 ## Repeat the above for 2 n-grams
-twoNGramTokensTwitterEn<-fileTextTwitterEn %>% unnest_tokens(bigram, text, token="ngrams",n=2)
-twoNGramTokensNewEn<-fileTextNewEn %>% unnest_tokens(bigram, text, token="ngrams",n=2)
-twoNGramTokensBlogEn<-fileTextBlogEn %>% unnest_tokens(bigram, text, token="ngrams",n=2)
+twoNGramTokensTwitterEn<-fileTextTwitterEn %>% unnest_tokens(bigram, value, token = "ngrams", n = 2)
+twoNGramTokensNewEn<-fileTextNewEn %>% unnest_tokens(bigram, value, token = "ngrams", n = 2)
+twoNGramTokensBlogEn<-fileTextBlogEn %>% unnest_tokens(bigram, value, token = "ngrams", n = 2)
+
 
 ## Filter bigram lists for stop words
 
